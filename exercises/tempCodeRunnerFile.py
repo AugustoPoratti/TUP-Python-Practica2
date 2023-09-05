@@ -1,15 +1,27 @@
-def maximo_basico(a: float, b: float) -> float:
-    """Toma dos números y devuelve el mayor.
+def numeros_al_final_basico(lista: List[Union[float, str]]) -> List[Union[float, str]]:  # noqa: E501
+    """Toma una lista de enteros y strings y devuelve una lista con todos los
+    elementos numéricos al final.
 
     Restricciones:
-        - Utilizar IF
-        - No utilizar ELSE
-        - No utilizar la función max
+        - Utilizar un bucle FOR.
+        - Utilizar la función type.
+        - No utilizar índices.
     """
-    if a > b:
-        return a
- 
-    
+    lista_numeros = []
+    _lista = []
+
+    for elemento in _lista:
+        if type(elemento) == int:
+            lista_numeros.append(elemento)
+        else:
+            _lista.append(elemento)
+
+
+    _lista.extend(lista_numeros)
+
+    print(_lista)
+
+    return _lista
+
 # NO MODIFICAR - INICIO
-assert maximo_basico(10, 5) == 10
-assert maximo_basico(9, 18) == 18
+assert numeros_al_final_basico([3, "a", 1, "b", 10, "j"]) == ["a", "b", "j", 3, 1, 10]  # noqa: E501
